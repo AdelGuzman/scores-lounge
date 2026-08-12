@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
+  <title>Scores Lounge — Social Links</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="holiday-inn" aria-label="Holiday Inn">
+        <div class="hi-mark">H</div>
+        <div class="hi-text">Holiday Inn</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="logo-wrap">
+        <img src="scores-logo.jpg" alt="Scores Lounge logo" class="scores-logo" />
+      </div>
+
+      <h1>Scores Lounge</h1>
+      <p class="subtitle">Connect with us</p>
+
+      <div class="links">
+        <a class="link-card instagram" href="https://www.instagram.com/scores_lounge/" target="_blank" rel="noopener">
+          <span class="icon">◎</span>
+          <span>Instagram</span>
+          <span class="arrow">→</span>
+        </a>
+
+        <a class="link-card facebook" href="https://www.facebook.com/Scoressportsbar" target="_blank" rel="noopener">
+          <span class="icon">f</span>
+          <span>Facebook</span>
+          <span class="arrow">→</span>
+        </a>
+
+        <a class="link-card tripadvisor" href="https://www.tripadvisor.com/Restaurant_Review-g294201-d14774406-Reviews-Scores_Sports_Bar_Restaurant-Cairo_Cairo_Governorate.html" target="_blank" rel="noopener">
+          <span class="icon">TA</span>
+          <span>Tripadvisor</span>
+          <span class="arrow">→</span>
+        </a>
+
+        <a class="link-card google" href="https://www.google.com/maps/place/Scores+Sport+Bar+and+Restaurant+-+%D9%85%D8%B7%D8%B9%D9%85+%D9%88+%D8%A8%D8%A7%D8%B1+%D8%B3%D9%83%D9%88%D8%B1%D8%B2%E2%80%AD/@29.9621718,31.2450228,1955m/data=!3m1!1e3!4m8!3m7!1s0x14584782c19c97d9:0x56aa2c08002a274c!8m2!3d29.9608142!4d31.2478249!9m1!1b1!16s%2Fg%2F11hf1z3yj0?entry=ttu&g_ep=EgoyMDI2MDgwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+          <span class="icon">★</span>
+          <span>Google Maps Reviews</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <section class="qr-section">
+        <div class="qr-box">
+          <div id="qrcode"></div>
+        </div>
+        <h2>Scan to connect</h2>
+        <p>Scan this QR code to open the Scores Lounge social page.</p>
+        <button class="print-btn" onclick="window.print()">Print QR Code</button>
+      </section>
+    </section>
+
+    <footer>Scores Lounge · Food · Drinks · Sports</footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: window.location.href,
+      width: 190,
+      height: 190,
+      colorDark: "#111111",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>

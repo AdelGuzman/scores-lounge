@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #050505;
+  --card: #111111;
+  --text: #ffffff;
+  --muted: #a8a8a8;
+  --line: rgba(255,255,255,.10);
+  --green: #1fa85a;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(70,70,70,.16), transparent 30%),
+    #050505;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.page {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: 18px 18px 30px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 58px;
+}
+
+.holiday-inn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+}
+
+.hi-mark {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: #1db954;
+  color: white;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 22px;
+  font-style: italic;
+  box-shadow: 0 5px 18px rgba(29,185,84,.20);
+}
+
+.hi-text {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 6px auto 14px;
+}
+
+.scores-logo {
+  width: 178px;
+  height: 178px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #000;
+  border: 2px solid rgba(255,255,255,.12);
+  box-shadow: 0 18px 50px rgba(0,0,0,.55);
+}
+
+h1 {
+  margin: 4px 0 4px;
+  font-size: 28px;
+  letter-spacing: .5px;
+}
+
+.subtitle {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.links {
+  display: grid;
+  gap: 12px;
+}
+
+.link-card {
+  min-height: 60px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,255,255,.065), rgba(255,255,255,.025));
+  color: #fff;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 38px 1fr 25px;
+  align-items: center;
+  text-align: left;
+  font-weight: 700;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.22);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: #1d1d1d;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.instagram .icon { background: #d6249f; }
+.facebook .icon { background: #1877f2; }
+.tripadvisor .icon { background: #34a853; font-size: 11px; }
+.google .icon { background: #f4b400; color: #151515; }
+
+.arrow {
+  color: #8e8e8e;
+  font-size: 21px;
+  text-align: right;
+}
+
+.qr-section {
+  margin-top: 28px;
+  padding: 22px 18px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.035);
+}
+
+.qr-box {
+  width: 210px;
+  height: 210px;
+  margin: 0 auto 14px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+}
+
+#qrcode {
+  line-height: 0;
+}
+
+#qrcode img {
+  display: block;
+  width: 190px;
+  height: 190px;
+}
+
+.qr-section h2 {
+  margin: 6px 0 5px;
+  font-size: 20px;
+}
+
+.qr-section p {
+  margin: 0 auto 16px;
+  max-width: 330px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.print-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #fff;
+  color: #111;
+}
+
+footer {
+  text-align: center;
+  color: #6f6f6f;
+  font-size: 11px;
+  margin-top: 22px;
+  letter-spacing: .6px;
+}
+
+@media (max-width: 390px) {
+  .page { padding-left: 14px; padding-right: 14px; }
+  .scores-logo { width: 155px; height: 155px; }
+  h1 { font-size: 25px; }
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .page { width: 100%; max-width: 600px; }
+  .topbar, .links, .subtitle, footer, .print-btn { display: none; }
+  .hero { padding-top: 0; }
+  .scores-logo { box-shadow: none; }
+  .qr-section { border: 0; background: #fff; }
+  .qr-section h2, .qr-section p { color: #000; }
+}
